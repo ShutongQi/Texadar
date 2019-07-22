@@ -1,0 +1,16 @@
+clc;clear;
+name={'cjc','qst','smj'};
+i=3;
+address=['D:\2019summer\data\gesture_filt\',name{i},'_',num2str(9),'_',num2str(1),'.txt'];
+save_address=['D:\2019summer\data\output\',name{i},'_',num2str(9),'_',num2str(1),'_filtered.txt'];
+orgdata=importdata(address);
+data=orgdata';
+data=data(:);
+filtdata=importdata(save_address);
+filtdata=filtdata';
+filtdata=filtdata(:);
+figure(1);
+subplot(2,1,1);
+plot(data);
+subplot(2,1,2);
+plot(filtdata);
